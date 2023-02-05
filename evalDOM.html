@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="evalDOM.css">
+    <title>Evaluation Manipulation du DOM</title>
+</head>
+<body>
+    <section class="navbar tab">
+        <button class="tablinks" id="menuGlobal" onclick="toggleElements(event, 'Boutons')">Onglets</button>
+
+        <section class="tab" id="Boutons">
+            <button class="tablinks" id="onglet1" onclick="toggleElements(event, 'menu1')">Menu 1</button>
+            <button class="tablinks" id="onglet2" onclick="toggleElements(event, 'menu2')">Menu 2</button>
+            <button class="tablinks" id="onglet3" onclick="toggleElements(event, 'menu3')">Menu 3</button>
+            <button class="tablinks" id="onglet4" onclick="toggleElements(event, 'menu4')">Menu 4</button>
+            <button class="tablinks" id="onglet5" onclick="toggleElements(event, 'menu5')">Menu 5</button>
+        </section>
+
+    </section>
+
+    <section class="grid-container">
+        <section class="grid-item" id="menu1">
+            <h1>Menu 1</h1>
+            <section class="contenuMenus">
+            <table id="table">
+                <tr>
+                  <td><a href="https://file1.closermag.fr/var/closermag/storage/images/bio-people/biographie-michel-drucker-112265/815241-1-fre-FR/Michel-Drucker.jpg?alias=exact1024x768_l" class="cell">Image 1</a></td>
+                  <td><a href="https://file1.closermag.fr/var/closermag/storage/images/bio-people/biographie-harry-roselmack-112610/823176-1-fre-FR/Harry-Roselmack.jpg?alias=exact1024x768_l" class="cell">Image 2</a></td>
+                  <td><a href="https://file1.closermag.fr/var/closermag/storage/images/9/4/1/0/9410977/laurent-ruquier.jpg?alias=square500x500&size=x100&format=jpeg" class="cell">Image 3</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.programme-tv.net/imgre/fit/~2~providerPerson~c29dbd11e624b01a.jpeg/300x300/quality/80/arthur.jpeg" class="cell">Image 4</a></td>
+                  <td><a href="https://yt3.googleusercontent.com/ytc/AL5GRJXD7-afVxFmTy-bUcFUtrkAtJM3OEupQnMhcA2qyA=s900-c-k-c0x00ffffff-no-rj" class="cell">Image 5</a></td>
+                  <td><a href="https://upload.wikimedia.org/wikipedia/commons/0/0a/Nagui_Cannes_2019.jpg" class="cell">Image 6</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://images.rtl.fr/~c/2000v2000/rtl/www/1146427-jean-pierre-coffe-en-septembre-2012.jpg" class="cell">Image 7</a></td>
+                  <td><a href="https://static1.purebreak.com/articles/8/23/64/78/@/798399--meme-zemmour-n-aurait-pas-ose-cette-diapo-2.jpg" class="cell">Image 8</a></td>
+                  <td><a href="https://france3-regions.francetvinfo.fr/image/SUOxdYXN-cSW5-yuAvbL_-AlJZc/1200x1200/regions/2021/10/10/6162b90791c8b_000-1hm64j-5484797.jpg" class="cell">Image 9</a></td>
+                </tr>
+              </table>
+              
+              <section id="imageTable">
+                <img id="afficheImage">
+              </section>
+            </section>
+        </section>
+        <section class="grid-item" id="menu2">
+            <h1>Menu 2</h1>
+            <section class="contenuMenus">
+                <input type="text" id="field1" placeholder="Nom">
+                <input type="text" id="field2" placeholder="Prénom">
+                <button id="submit">Ajouter</button>
+                <button id="clear">Effacer le tableau</button>
+                <table id="dataTable">
+                  <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                  </tr>
+                </table>
+            </section>
+
+        </section>
+        <section class="grid-item" id="menu3">
+            <h1>Menu 3</h1>
+            <section class="contenuMenus">
+                <select id="styleSelect">
+                    <option value="default">Sans style</option>
+                    <option value="bold">Gras</option>
+                    <option value="italic">Italique</option>
+                    <option value="underline">Sous ligné</option>
+                  </select>
+                  <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium delectus veniam impedit obcaecati quibusdam, quod cum totam fuga provident esse dolorum itaque maiores incidunt, dolores saepe aliquam vitae et autem.</p>
+            </section>
+
+        </section>
+        <section class="grid-item" id="menu4">
+            <h1>Menu 4</h1>
+            <section class="contenuMenus">
+                <ul id="list">
+                  <li>Je suis le PREMIER élément de la liste !</li>
+                  <li>Je suis le second élément de la liste !</li>
+                  <li>Je suis le troisième élément de la liste !</li>
+                  <li>Je suis le DERNIER élément de la liste !</li>
+                </ul>
+                <button id="up">Vers le haut</button>
+                <button id="down">Vers le bas</button>
+              </section>
+              
+
+        </section>
+        <section class="grid-item" id="menu5">
+            <h1>Menu 5</h1>
+            <section class="contenuMenus">
+                <input type="checkbox" id="option1">Horreur<br>
+                <input type="checkbox" id="option2">Aventure<br>
+                <input type="checkbox" id="option3">Sci-Fi<br>
+                <input type="checkbox" id="option3">Fantastique<br>
+                <input type="checkbox" id="option3">Thriller<br>
+                <input type="checkbox" id="option3">Documentaire<br>
+              
+                <input type="radio" name="display" id="display-div" value="div">Afficher dans une div
+                <input type="radio" name="display" id="display-dropdown" value="dropdown">Afficher dans un menu déroulant<br>
+              
+                <div id="display-area"></div>
+              </section>
+
+        </section>
+    </section>
+
+
+    <script src="evalDom.js"></script> 
+</body>
+</html>
